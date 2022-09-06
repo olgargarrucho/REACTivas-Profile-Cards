@@ -1,0 +1,41 @@
+@import '../core/Variables.scss';
+
+.main-profile {
+    background: $dark-gradient;
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: calc(100vh - 10.8rem - 6.663rem);
+    
+  
+    @media all and (min-width: 768px) {
+      grid-template-columns: 2fr 3fr;
+      padding: 20px 40px 20px;
+      min-height: calc(100vh - 9.1rem - 8rem);
+      align-content: space-between;
+  
+      .preview {
+        border-radius: 7px;
+      }
+      .card {
+        margin-bottom: 300px;
+      }
+    }
+  }
+  
+  .preview {
+    @media all and (min-width: 768px) {
+      order: 2;
+  
+    }
+  }
+  
+  
+  .rotate {
+    transform: rotate(90deg);
+    transition-duration: 350ms;
+  
+  }
+  .skull {
+    transition-duration: 350ms;
+    filter: invert(100%);
+  }
