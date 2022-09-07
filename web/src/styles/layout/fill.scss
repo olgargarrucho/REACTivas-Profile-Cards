@@ -1,0 +1,123 @@
+@import '../core/Variables.scss';
+
+
+.fill-section {
+    border: 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: $main_font;
+    padding-bottom: 30px;
+    border-bottom: solid #d8d8d8 1px;
+  }
+  
+  .fill-inputs-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.4rem;
+  }
+  
+  .fill-section input {
+    padding: 5px;
+    border: 1px solid #919191;
+    background-color: #919191;
+    border-radius: 5px;
+    &:focus{
+      outline: none;
+      outline: red solid 2.5px;
+    }
+  }
+  .text-fill {
+    color: $secondary_color;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  .text-fill:first-letter {
+    text-transform: capitalize;
+  }
+  .profile:first-letter {
+    text-transform: capitalize;
+  }
+  .profile {
+    margin-bottom: 15px;
+  }
+  .legend-fill {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    color: $main_text_color;
+    cursor: pointer;
+  }
+  .fill {
+    text-transform: uppercase;
+    color: $main_text_color;
+    font-size: 1.8rem;
+    font-weight: 600;
+    flex-grow: 1;
+  }
+  
+  .fill-section .fa-keyboard {
+    color: $primary_color;
+    width: 20px;
+    height: 20px;
+  }
+  .fill-section .fa-angle-down {
+    display: block;
+    margin-right: 5%;
+    color: $main_text_color;
+  }
+  .div-text-fill {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 150px 100px;
+  }
+  
+  .profile__preview {
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
+    border: solid 1px $secondary_color;
+    grid-column-start: 2;
+    align-items: baseline;
+    background-size: cover;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  .profile {
+    color: $secondary_color;
+    font-weight: 500;
+  }
+  .image_button {
+    border: 0;
+    box-shadow: 0 0 5px rgba(#000, 0.3);
+    box-sizing: border-box;
+    color: #000;
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+    width: 140px;
+    cursor: pointer;
+    background-color: $primary_color;
+    height: 30px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    transition-duration: 500ms; 
+    &:hover{
+      background-color: $secondary_color; 
+  }
+  &:active {
+    background-color: $secondary_color_active;
+    transition-duration: 250ms; 
+  }
+  }
+  .image__hiddenField {
+    /* Ocultamos el input de tipo "file" porque no podemos 
+      darle los estilos que queremos */
+    display: none;
+  }

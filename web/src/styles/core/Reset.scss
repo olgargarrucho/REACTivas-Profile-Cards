@@ -1,0 +1,12 @@
+@import './Variables.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-family: $main_font;
+    font-size: 62.5%;
+  }
