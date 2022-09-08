@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/main.css" />
+    <script src="https://kit.fontawesome.com/9e21a44317.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/images/favicon.png" />
+    <title>Scream profile cards</title>
+</head>
+
+<body>
+    <section class="preview">
+
+        <selection class="card palette<%= palette %>">
+            <div class="rectangle"></div>
+            <selection class="information ">
+                <p class="name">
+                    <%= name %>
+                </p>
+                <p class="developer">
+                    <%= job %>
+                </p>
+            </selection><img class="photo js-preview-photo" src="<%= photo %>" alt="profile">
+            <ul class="icons">
+                <li><a class="icon-phone icon-border card-links" title="Teléfono" href="tel:<%= phone %>"
+                        target="_blank" rel="noreferrer"><i class="fa-solid fa-mobile-screen-button fa-xl"></i></a></li>
+                <li><a class="icon-email icon-border card-links" title="Teléfono" href="mailto:<%= email %>"
+                        target="_blank" rel="noreferrer"><i class="fa-solid fa-envelope fa-xl"></i></a></li>
+                <li><a class="icon-linkedin icon-border card-links" title="Teléfono" href="<%= linkedin %>"
+                        target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                <li><a class="icon-github icon-border card-links" title="Teléfono" href="<%= github %>" target="_blank"
+                        rel="noreferrer"><i class="fa-brands fa-github-alt fa-xl"></i></a></li>
+            </ul>
+        </selection>
+    </section>
+</body>
+
+</html>

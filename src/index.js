@@ -1,15 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
-
+const Database = require('better-sqlite3');
 const server = express();
 server.use(cors());
 server.use(express.json({
     limit: "10mb"
 }));
 server.set('view engine', 'ejs');
-
-const port = 4000;
+const db = new Database('./src/db/cardsdatabase.db', {verbose: console.log});
+const port = process.env.PORT || 4000;
 server.listen(port, () => {
     console.log('listening' + port);
 });
@@ -77,12 +77,12 @@ server.post('/card', (req, res) => {
     } else {
         const newCard = {
             ...req.body,
-            id: uuidv4()
+            id: uuidv4(),
         }
         savedCard.push(newCard);
         const responseSuccess = {
             cardURL:
-                `https://localhost:4000/card/${newCard.id}`,
+                `http://localhost:4000/card/${newCard.id}`,
             success: true,
         };
         res.json(responseSuccess);
@@ -94,10 +94,18 @@ server.post('/card', (req, res) => {
 });
 // endpoint "devolver tarjeta"
 server.get('/card/:id', (req, res) => {
-    console.log(req.params);
-    res.render('page');
+    const id = req.params.id;
+    const query = db.prepare(`
+        SELECT * 
+            FROM cards
+            WHERE id = ?`);
+    const card = query.get(id);
+    res.render('card', card);
 });
 
 
 const staticServerPath = ('./src/public-react');
 server.use(express.static(staticServerPath));
+
+const staticServerStyles = ('./src/public-styles');
+server.use(express.static(staticServerStyles));
