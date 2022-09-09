@@ -123,7 +123,17 @@ server.get('/card/:id', (req, res) => {
     const card = query.get(id);
     res.render('card', card);
 });
+ //endpoint 404
 
+//  server.get('*', (req, res) => {
+//     // Relativo a este directorio
+//     const notFoundFileRelativePath = '../web/404-not-found.html';
+//     const notFoundFileAbsolutePath = path.join(
+//       __dirname,
+//       notFoundFileRelativePath
+//     );
+//     res.status(404).sendFile(notFoundFileAbsolutePath);
+//   });
 
 const staticServerPath = ('./src/public-react');
 server.use(express.static(staticServerPath));
