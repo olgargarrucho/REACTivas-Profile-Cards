@@ -22,7 +22,7 @@ function Card(props) {
           handleCreateCard={props.handleCreateCard}
           collapsed={props.collapsed}
           handlePalette={props.handlePalette}
-          rotate={props.rotate}
+          rotate={props.rotate} twitter={props.twitter}
         />
       </main>
       <Footer />

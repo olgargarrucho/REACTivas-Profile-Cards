@@ -14,8 +14,14 @@ server.listen(port, () => {
     console.log('listening' + port);
 });
 
-const savedCard = [];
 //endpoint
+server.get('/', (req, res)=> {
+    res.sendFile('public-react/index.html' , { root : __dirname});
+})
+server.get('/card', (req, res)=> {
+    res.sendFile('public-react/index.html' , { root : __dirname});
+})
+
 server.post('/card', (req, res) => {
 
     if (req.body.palette === "") {
@@ -79,17 +85,32 @@ server.post('/card', (req, res) => {
             ...req.body,
             id: uuidv4(),
         }
-        savedCard.push(newCard);
-        const responseSuccess = {
-            cardURL:
-                `http://localhost:4000/card/${newCard.id}`,
-            success: true,
-        };
-        res.json(responseSuccess);
+        const query = db.prepare(`
+        INSERT INTO cards(name, palette, id, job, phone, email, linkedin, github, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`);
+        const result = query.run(
+            newCard.name,
+            newCard.palette,
+            newCard.id,
+            newCard.job,
+            newCard.phone,
+            newCard.email,
+            newCard.linkedin,
+            newCard.github,
+            newCard.photo
+
+        );
+        //savedCard.push(newCard);
+        if(result){
+            const responseSuccess = {
+                cardURL:
+                    `http://localhost:4000/card/${newCard.id}`,
+                success: true,
+            };
+            res.json(responseSuccess);
+        }
+        
+        
     };
-
-
-
 
 });
 // endpoint "devolver tarjeta"

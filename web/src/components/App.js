@@ -25,6 +25,7 @@ function App() {
   const [collapsed, setCollapsed] = useState(['', 'collapsed', 'collapsed']);
   const [rotate, setRotate] = useState(['', '', '']);
   const [palette, setPalette] = useState(1);
+  const [twitter, setTwitter] = useState('collapsed');
 
   //Image
 
@@ -41,6 +42,11 @@ function App() {
   const handleCreateCard = () => {
     dataApi(dataCard).then((info) => {
       setResultCard(info);
+      if(info.success){
+        setTwitter('');
+      } else {
+        setTwitter('collapsed');
+      }
     });
   };
 
@@ -86,6 +92,7 @@ function App() {
               palette={palette}
               handlePalette={handlePalette}
               rotate={rotate}
+              twitter={twitter}
             />
           }
         />

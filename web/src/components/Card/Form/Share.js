@@ -37,7 +37,7 @@ function Share(props) {
           <h3 className="share-text"></h3>
         </div>
 
-        <div className="created">
+        <div className="created ">
           <h3 className="share-text">
             {props.resultCard.success === true
               ? 'La tarjeta ha sido creada:'
@@ -46,7 +46,7 @@ function Share(props) {
           <a className="link" href={props.resultCard.cardURL} target="_blank">
             {props.resultCard.success === true ? props.resultCard.cardURL : ''}
           </a>
-          <a className="button-share" href="#" target="_blank">
+          <a className={`button-share ${props.twitter}`} href={`https://twitter.com/intent/tweet?text=%C2%A1¡¡He%20creado%20mi%20propia%20tarjeta%20de%20contacto!!!%20Puedes%20verla%20aqu%C3%AD%3A&url=${props.resultCard.cardURL}`} target="_blank">
         <i className="fa-brands fa-twitter"></i>
         <span> Compartir en twitter</span>
       </a>

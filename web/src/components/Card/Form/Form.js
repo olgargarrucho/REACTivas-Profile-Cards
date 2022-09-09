@@ -36,7 +36,7 @@ function Form(props) {
           setResultCard={props.setResultCard}
           handleCreateCard={props.handleCreateCard}
           collapsed={props.collapsed}
-          rotate={props.rotate}
+          rotate={props.rotate} twitter={props.twitter}
           
         />
       </form>
