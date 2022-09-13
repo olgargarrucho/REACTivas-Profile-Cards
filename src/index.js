@@ -99,7 +99,7 @@ server.post("/card/", (req, res) => {
     //savedCard.push(newCard);
     if (result) {
       const responseSuccess = {
-        cardURL: `http://localhost:4000/card/${newCard.id}`,
+        cardURL: `https://reactivas.herokuapp.com/card/${newCard.id}`,
         success: true,
       };
       return res.json(responseSuccess);
