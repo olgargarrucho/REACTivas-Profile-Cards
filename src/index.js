@@ -27,35 +27,35 @@ server.post("/card", (req, res) => {
       success: false,
       error: "Selecciona una paleta",
     };
-    res.json(responseError);
+    return res.json(responseError);
   }
   if (req.body.name === "") {
     const responseError = {
       success: false,
       error: "Escribe tu nombre",
     };
-    res.json(responseError);
+    return res.json(responseError);
   }
   if (req.body.job === "") {
     const responseError = {
       success: false,
       error: "Escribe tu trabajo",
     };
-    res.json(responseError);
+    return res.json(responseError);
   }
   if (req.body.photo === "") {
     const responseError = {
       success: false,
       error: "Sube una imagen",
     };
-    res.json(responseError);
+    return res.json(responseError);
   }
   if (req.body.email === "") {
     const responseError = {
       success: false,
       error: "Escribe tu correo",
     };
-    res.json(responseError);
+    return res.json(responseError);
   }
 
   if (req.body.phone === "") {
@@ -63,21 +63,21 @@ server.post("/card", (req, res) => {
       success: false,
       error: "Escribe tu telefono",
     };
-    res.json(responseError);
+    return res.json(responseError);
   }
   if (req.body.linkedin === "") {
     const responseError = {
       success: false,
       error: "Escribe tu linkedin",
     };
-    res.json(responseError);
+    return res.json(responseError);
   }
   if (req.body.github === "") {
     const responseError = {
       success: false,
       error: "Escribe tu usuario de github",
     };
-    res.json(responseError);
+    return res.json(responseError);
   } else {
     const newCard = {
       ...req.body,
@@ -102,7 +102,7 @@ server.post("/card", (req, res) => {
         cardURL: `http://localhost:4000/card/${newCard.id}`,
         success: true,
       };
-      res.json(responseSuccess);
+      return res.json(responseSuccess);
     }
   }
 });
