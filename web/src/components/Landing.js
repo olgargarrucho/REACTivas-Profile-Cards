@@ -29,12 +29,7 @@ function Landing() {
         </ul>
 
         <div className="farmeContainer">
-           <iframe
-            src="https://my.spline.design/untitled-64ca818ba17b16e5a2a0b7e3d075d5d3/"
-            frameborder="0"
-            width="100%"
-            height="100%"
-          ></iframe> 
+        <iframe src='https://my.spline.design/superkidrobotcopy-9da3f3a9072255bc25df86cfb1f63e34/' frameborder='0' width='100%' height='100%'></iframe>
         </div>
 
         <Link

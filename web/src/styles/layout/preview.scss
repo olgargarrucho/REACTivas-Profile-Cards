@@ -118,7 +118,7 @@
   }
   
   .icons a {
-    color: $secondary_color;
+    color: $primary_color;
     &:hover{
       color: $secondary_color_active;
     }
@@ -194,12 +194,12 @@
   }
   .palette4 {
     & p {
-      color: #394032;
+      color: #2d88bd;
     }
     & .icon-border {
-      border: #CCCC00 2px solid;
+      border: #c7006a 2px solid;
     }
     & .rectangle {
-      background-color: #DA7422;
+      background-color: #FFC8DD;
     }
   }

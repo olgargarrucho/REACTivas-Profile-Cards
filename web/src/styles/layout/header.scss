@@ -34,7 +34,7 @@
       justify-content: center;
       margin: 0rem;
       padding: 1rem;
-      background: $dark-gradient;
+      background: $inverse-gradient;
       
       
      @media all and (min-width: 768px) {
@@ -44,7 +44,7 @@
     }
   
     &__logo {
-      width: 20rem;
+      width: 23rem;
    
     }
   }

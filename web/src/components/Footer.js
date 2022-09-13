@@ -4,7 +4,7 @@ import '../styles/layout/footer.scss';
 function Footer() {
   return (
     <footer className="footer">
-      <p className="footer__copyright">ScreamTeam profile-cards @2022</p>
+      <p className="footer__copyright">Reactivas profile-cards @2022</p>
       <img
         className="footer__logo"
         src={logoAdalab}
