@@ -20,9 +20,6 @@ server.listen(port, () => {
 server.get("/", (req, res) => {
   res.sendFile("public-react/index.html", { root: __dirname });
 });
-server.get("/card", (req, res) => {
-  res.sendFile("public-react/index.html", { root: __dirname });
-});
 
 server.post("/card", (req, res) => {
   if (req.body.palette === "") {
@@ -109,6 +106,11 @@ server.post("/card", (req, res) => {
     }
   }
 });
+
+server.get("/card", (req, res) => {
+  res.sendFile("public-react/index.html", { root: __dirname });
+});
+
 // endpoint "devolver tarjeta"
 server.get("/card/:id", (req, res) => {
   const id = req.params.id;
