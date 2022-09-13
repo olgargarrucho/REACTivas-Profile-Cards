@@ -21,7 +21,7 @@ server.get("/", (req, res) => {
   res.sendFile("public-react/index.html", { root: __dirname });
 });
 
-server.post("/card", (req, res) => {
+server.post("/card/", (req, res) => {
   if (req.body.palette === "") {
     const responseError = {
       success: false,
