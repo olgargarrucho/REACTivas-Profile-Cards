@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.ae0c5d44.css",
-    "main.js": "./static/js/main.4c22fc66.js",
-    "static/media/photo2.png": "./static/media/photo2.bc62ace941fec61297c9.png",
-    "static/media/scream-team-04.png": "./static/media/scream-team-04.5c5cf4fb776b6fe9005a.png",
+    "main.css": "./static/css/main.ace38950.css",
+    "main.js": "./static/js/main.d6cd2279.js",
+    "static/media/photo2.png": "./static/media/photo2.b4758bcda41f658dda8f.png",
+    "static/media/scream-team-04.png": "./static/media/scream-team-04.d256f3775eca6d4049bd.png",
     "index.html": "./index.html",
-    "main.ae0c5d44.css.map": "./static/css/main.ae0c5d44.css.map",
-    "main.4c22fc66.js.map": "./static/js/main.4c22fc66.js.map"
+    "main.ace38950.css.map": "./static/css/main.ace38950.css.map",
+    "main.d6cd2279.js.map": "./static/js/main.d6cd2279.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae0c5d44.css",
-    "static/js/main.4c22fc66.js"
+    "static/css/main.ace38950.css",
+    "static/js/main.d6cd2279.js"
   ]
 }

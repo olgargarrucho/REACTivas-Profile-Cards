@@ -10,13 +10,13 @@
     gap: 1.2rem;
     background: $inverse-gradient;
     box-sizing: border-box;
-    height: auto;
+    min-height: 10vh;
   
     @media all and (min-width: 768px) {
       padding: 25px;
       flex-direction: row;
       justify-content: space-between;
-      height: auto;
+      //height: auto;
     }
   
     &__copyright {
