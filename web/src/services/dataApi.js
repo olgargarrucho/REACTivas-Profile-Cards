@@ -1,15 +1,15 @@
 const dataApi = (data) => {
-  return fetch("http://localhost:4000/card/", {
-    method: 'POST',
+  return fetch("https://reactivas.herokuapp.com/card", {
+    method: "POST",
     body: JSON.stringify(data),
     headers: {
-      'content-type': 'application/json'
+      "content-type": "application/json",
     },
   })
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       return data;
-    })
+    });
 };
 
 export default dataApi;
