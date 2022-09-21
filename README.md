@@ -1,4 +1,4 @@
-<h1 align="center">REACTivas</h1>
+<h1 align="center">REACTivas Profile Cards</h1>
 
 ---
 
